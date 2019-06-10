@@ -81,15 +81,24 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+#
+# DATABASES = {
+#      'default': {
+#          'ENGINE': 'djongo',
+#          'NAME': 'portfolio_db',
+#      }
+#  }
 
 DATABASES = {
-     'default': {
-         'ENGINE': 'djongo',
-         'NAME': 'portfolio_db',
-     }
- }
-
-
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'portfolio_db',
+        'USER': 'djangodbman',
+        'PASSWORD': 'djhchccango',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
 
 
 # Password validation
@@ -128,8 +137,20 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+STATICFILES_DIRS=[
+ os.path.join(BASE_DIR, 'portfolio/static/')
+]
+
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
+
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
