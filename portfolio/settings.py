@@ -82,23 +82,23 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 #     }
 # }
 #
-# DATABASES = {
+ #DATABASES = {
 #      'default': {
 #          'ENGINE': 'djongo',
 #          'NAME': 'portfolio_db',
 #      }
-#  }
+ # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'portfolio_db',
-        'USER': 'djangodbman',
-        'PASSWORD': 'djhchccango',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
+ DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+         'NAME': 'portfolio_db',
+         'USER': 'djangodbman',
+         'PASSWORD': 'djhchccango',
+         'HOST': 'localhost',
+         'PORT': '5432',
+     }
+ }
 
 
 # Password validation
