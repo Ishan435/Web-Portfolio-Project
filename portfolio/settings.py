@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 #      }
  # }
 
- DATABASES = {
+DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.postgresql_psycopg2',
          'NAME': 'portfolio_db',
